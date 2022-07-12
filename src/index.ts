@@ -1,5 +1,6 @@
 import express from "express";
 import axios from "axios";
+import morgan from "morgan";
 require("dotenv").config();
 import drivers from "./static/drivers.json";
 import { Utils } from "./util/Utils";
@@ -14,8 +15,11 @@ const utils = new Utils();
 
 const driverService = new DriverService(axios, drivers, utils);
 
-const driverController = new DriverController(express.Router(), driverService);
-
+const driverController = new DriverController(
+  express.Router(),
+  morgan,
+  driverService
+);
 app.use("/api/drivers", driverController.getRouterConf());
 
 if (process.env.NODE_ENV === "production") {
