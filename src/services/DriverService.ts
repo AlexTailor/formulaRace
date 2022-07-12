@@ -22,7 +22,6 @@ export class DriverService {
   overTakePlace(driverId: any) {
     try {
       for (let i = 0; i < this.drivers.length; i++) {
-        console.log(this.drivers[i].id == driverId);
         if (this.drivers[i].id == driverId && this.drivers[i].place !== 1) {
           this.drivers[i].place = this.drivers[i].place - 1;
           this.drivers[i - 1].place = this.drivers[i - 1].place + 1;
