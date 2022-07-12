@@ -2,6 +2,8 @@
 
 ## To start the program for the first time:
 
+First setup your .env file you can find the example in the repository then use the shell command below
+
 ```console
 yarn install --ignore-engines
 yarn fe-dependencies
