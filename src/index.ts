@@ -1,6 +1,5 @@
 import express from "express";
 import axios from "axios";
-import path from "path";
 require("dotenv").config();
 import drivers from "./static/drivers.json";
 import { Utils } from "./util/Utils";
@@ -24,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
   app.use("/static", express.static("src/static"));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(process.cwd() + "/client/build/index.html");
   });
 }
 
