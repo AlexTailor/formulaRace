@@ -7,11 +7,18 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
+    "fe-dependencies": "cd client && yarn install --ignore-engines",
+    "fe-build": "cd client && yarn build",
     "start": "tsc & node .",
     "dev": "tsc -w & nodemon ."
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
