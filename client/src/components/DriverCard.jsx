@@ -10,7 +10,7 @@ export const DriverCard = (props) => {
 
   return (
     <div className="col-sm-3">
-      <div className="card size">
+      <div className="card text-center">
         <img
           className="card-img-top image-size"
           src={`/static/${driver.code.toLowerCase()}.png`}
@@ -20,13 +20,17 @@ export const DriverCard = (props) => {
           <h5 className="card-title">{`${driver.firstname} ${driver.lastname}`}</h5>
         </div>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">{driver.code}</li>
-          <li className="list-group-item">{driver.country}</li>
-          <li className="list-group-item">{driver.team}</li>
-          <li className="list-group-item">{driver.place}</li>
+          <li className="list-group-item">Code: {driver.code}</li>
+          <li className="list-group-item">Country: {driver.country}</li>
+          <li className="list-group-item">Team: {driver.team}</li>
+          <li className="list-group-item">Place: {driver.place}</li>
         </ul>
         <div className="card-body">
-          <button type="submit" onClick={handleClick}>
+          <button
+            className="btn btn-outline-success"
+            type="submit"
+            onClick={handleClick}
+          >
             Go
           </button>
         </div>

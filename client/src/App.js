@@ -4,7 +4,7 @@ import { Drivers } from "./pages/Drivers";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Drivers />
     </div>
   );
