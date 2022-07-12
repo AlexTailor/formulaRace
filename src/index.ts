@@ -20,7 +20,6 @@ const driverController = new DriverController(express.Router(), driverService);
 app.use("/api/drivers", driverController.getRouterConf());
 
 if (process.env.NODE_ENV === "production") {
-  // Set static folder
   app.use(express.static("client/build"));
   app.use("/static", express.static("src/static"));
 

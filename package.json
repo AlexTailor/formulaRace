@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "copy-files": "cp ./src/static/ ./dist/",
+    "fe-dependencies": "cd client && yarn install --ignore-engines",
+    "fe-build": "cd client && yarn build",
     "start": "tsc & node .",
     "dev": "tsc -w & nodemon ."
   },
